@@ -3,7 +3,7 @@
 (****
 MIT License
 
-Copyright (c) 2020 
+Copyright (c) 2020-2021 
 Khalil Ghorbal (khalil.ghorbal -at- inria.fr)
 and 
 Andrew Sogokon (a.sogokon -at- soton.ac.uk)
@@ -34,7 +34,7 @@ SOFTWARE.
 **)
 
 
-BeginPackage["ES`"];
+BeginPackage["ESE`"];
 
 
 ContinuousInvariantQ::"ContinuousInvariantQ[S, f, vars, Q] Checks whether S is a positively invariant set for f under the constraint Q "

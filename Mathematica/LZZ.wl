@@ -2,7 +2,8 @@
 
 (* The MIT License
 
-Copyright (c) 2020 Khalil Ghorbal (khalil.ghorbal -at- inria.fr)
+Copyright (c) 2020-2021 
+Khalil Ghorbal (khalil.ghorbal -at- inria.fr)
 and Andrew Sogokon (a.sogokon -at- soton.ac.uk)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -64,7 +65,7 @@ lhs_>=rhs_:> Not[Inf[lhs<rhs, f, vars]]}
 ContinuousInvariantQ[S_ , f_List, vars_List, Q_]:=Module[{cond1, cond2},
 (* LZZ conditions *)
 cond1 = Implies[ S && Q && Inf[Q, f, vars], (* => *) Inf[S, f, vars] ];
-cond2 = Implies[ Not[S] && Q && Inf[Q, -f, vars], (* => *)  Not[Inf[S, -f, vars]] ];
+cond2 = Implies[ Not[S] && Q && Inf[Q, -f, vars], (* => *)  Inf[Not[S], -f, vars] ];
 (* Check real arithmetic conditions *)
 Reduce[ ForAll[vars, cond1 && cond2 (* Use Simplify[] here to improve performance at your own peril. *)], Reals] ]
 
